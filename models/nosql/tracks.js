@@ -31,7 +31,7 @@ const TracksScheme = new mongoose.Schema(
         duration:{
             start:{
                 type:Number,
-            }
+            },
             end:{
                 type:Number,
             }
