@@ -5,7 +5,7 @@ const { getItems, getItem, createItem } = require("../controllers/tracks")
 //TODO http://localhost/tracks GET, POST, DELETE, PUT
 
 router.get("/", getItems)
-router.get("/:id", getItem)
+// router.get("/:id", getItem)
 router.post("/", createItem)
 
-module.exports = router
+module.exports = router;
