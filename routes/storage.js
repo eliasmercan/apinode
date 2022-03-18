@@ -14,10 +14,12 @@ const storage = multer.diskStorage({
         const filename = `file-${Date.now()}.${ext}`;
         cb(null, filename)
     },
-})
+});
+
+const uploadMiddleware = multer({storage});
 
 
-router.post("/", (req, res)=>{
+router.post("/", uploadMiddleware.single("myfile"), (req, res)=>{
     res.send({a:1})
 })
 
