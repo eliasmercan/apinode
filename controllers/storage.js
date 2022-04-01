@@ -13,8 +13,8 @@ async function getItems(req, res) {
 const getItem = (req, res) =>{};
 
 const createItem = async(req, res) => {
-    const { body } = req
-    console.log(body)
+    const { body, file } = req
+    console.log(file)
     const data = await storageModel.create(body)
     res.send({data})
 };
